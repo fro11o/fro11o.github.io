@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<head>
-	<meta name="generator" content="Hugo 0.127.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>My New Hugo Site</title>
+	<title>Hugo mainroad 設定 - My New Hugo Site</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +13,6 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	
-	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="My New Hugo Site">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 </head>
@@ -37,26 +35,56 @@
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main list" role="main">
-	<article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/post/hello-hugo/" rel="bookmark">
-			Hugo mainroad 設定
-			</a>
-		</h2>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		步驟 安裝 Hugo (我是使用 Mac)
-homebrew install jugo mkdir hugo_website cd hugo_website hugo new site ./ 下載 mainroad 主題以及調整 hugo.toml 設定
-git submodule add https://github.com/vimux/mainroad.git themes/mainroad vim hugo.toml # 加上 theme = ‘main road’ 可將資料夾推到一個私有的 repo 保存
-vim .gitignore # 設定 *~, .hugo_build.lock git add . git commit git branch -M main git push -u origin main 將 public 部分推到 &lt;username&gt;.github.io
-cd public git init git add . git commit git remote add origin git@github.
-	</div>
-</article>
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Hugo mainroad 設定</h1>
+			
+		</header>
+		<div class="content post__content clearfix">
+			<h1 id="步驟">步驟</h1>
+<ul>
+<li>
+<p>安裝 Hugo (我是使用 Mac)</p>
+<pre tabindex="0"><code>homebrew install jugo
+mkdir hugo_website
+cd hugo_website
+hugo new site ./
+</code></pre></li>
+<li>
+<p>下載 mainroad 主題以及調整 hugo.toml 設定</p>
+<pre tabindex="0"><code>git submodule add https://github.com/vimux/mainroad.git themes/mainroad
+vim hugo.toml # 加上 theme = ‘main road’
+</code></pre></li>
+<li>
+<p>可將資料夾推到一個私有的 repo 保存</p>
+<pre tabindex="0"><code>vim .gitignore # 設定 *~, .hugo_build.lock
+git add .
+git commit
+git branch -M main
+git push -u origin main
+</code></pre></li>
+<li>
+<p>將 public 部分推到 &lt;username&gt;.github.io</p>
+<pre tabindex="0"><code>cd public
+git init
+git add .
+git commit
+git remote add origin git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git
+git push -u origin main
+</code></pre></li>
+</ul>
+<h1 id="reference">Reference</h1>
+<ul>
+<li><a href="https://hackmd.io/@udzQ2BohS5C0Xc66dtaYIA/S1wSWRbrO">https://hackmd.io/@udzQ2BohS5C0Xc66dtaYIA/S1wSWRbrO</a></li>
+<li><a href="https://themes.gohugo.io/themes/mainroad/">https://themes.gohugo.io/themes/mainroad/</a></li>
+</ul>
+
+		</div>
+	</article>
 </main>
+
+
 
 
 			</div>
