@@ -30,7 +30,22 @@
 				</div>
 		</a>
 	</div>
-		<div class="divider"></div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
 	</div>
 </header>
 		<div class="wrapper flex">
@@ -45,7 +60,22 @@
 
 			</div>
 			
-
+<aside class="sidebar">
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/hello-hugo/">Hugo mainroad 設定</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo (1)</a>
+	</div>
+</div>
+</aside>
 		</div>
 		<footer class="footer">
 	<div class="container footer__container flex">

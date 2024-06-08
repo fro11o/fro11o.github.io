@@ -31,7 +31,22 @@
 				</div>
 		</a>
 	</div>
-		<div class="divider"></div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item menu__item--active">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
 	</div>
 </header>
 		<div class="wrapper flex">
@@ -46,7 +61,9 @@
 			Hugo mainroad 設定
 			</a>
 		</h2>
-		
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2024-06-08T14:56:13&#43;08:00">June 08, 2024</time></div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		步驟 安裝 Hugo (我是使用 Mac)
@@ -55,12 +72,30 @@ git submodule add https://github.com/vimux/mainroad.git themes/mainroad vim hugo
 vim .gitignore # 設定 *~, .hugo_build.lock git add . git commit git branch -M main git push -u origin main 將 public 部分推到 &lt;username&gt;.github.io
 cd public git init git add . git commit git remote add origin git@github.
 	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/post/hello-hugo/">Read more…</a>
+	</div>
 </article>
 </main>
 
 
 			</div>
-			
+			<aside class="sidebar">
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/hello-hugo/">Hugo mainroad 設定</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo (1)</a>
+	</div>
+</div>
+</aside>
 		</div>
 		<footer class="footer">
 	<div class="container footer__container flex">
