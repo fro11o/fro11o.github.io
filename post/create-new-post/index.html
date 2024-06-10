@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>設定 hugo mainroad - 荒廢的山谷</title>
+	<title>建立 hugo post - 荒廢的山谷</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,48 +53,26 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">設定 hugo mainroad</h1>
+			<h1 class="post__title">建立 hugo post</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2024-06-08T14:56:13&#43;08:00">June 08, 2024</time></div></div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2024-06-10T17:28:46&#43;08:00">June 10, 2024</time></div></div>
 		</header>
 		<div class="content post__content clearfix">
-			<h1 id="步驟">步驟</h1>
+			<h1 id="建立-hugo-post">建立 hugo post</h1>
 <ul>
-<li>
-<p>安裝 hugo (我是使用 Mac)
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">homebrew install jugo
-mkdir hugo_website
-cd hugo_website
-hugo new site ./ </code></pre></div></p>
-</li>
-<li>
-<p>下載 mainroad 主題以及調整 hugo.toml 設定
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule add https://github.com/vimux/mainroad.git themes/mainroad
-vim hugo.toml <span style="color:#75715e"># 加上 theme = ‘main road’</span> </code></pre></div></p>
-</li>
-<li>
-<p>可將資料夾推到一個私有的 repo 保存
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vim .gitignore <span style="color:#75715e"># 設定 *~, .hugo_build.lock</span>
-git add .
-git commit
-git branch -M main
-git push -u origin main </code></pre></div></p>
-</li>
-<li>
-<p>將 public 部分推到 &lt;username&gt;.github.io
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd public
-git init
-git add .
-git commit
-git remote add origin git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git
-git push -u origin main</code></pre></div></p>
-</li>
+<li>使用 hugo new 指令即可
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new post/create-new-post.md
+/home/fro11o/github/fro11o/hugo_website/content/post/create-new-post.md created</code></pre></div></li>
+</ul>
+<h1 id="post-和-page-的差異">post 和 page 的差異</h1>
+<ul>
+<li>有發現到 post 跟 content 到底有什麼不同，查一下看起來是 post 是 hugo 預定義的一種型。你要自己定義其他類型像是 about 也是可以的。下次試試看。</li>
 </ul>
 <h1 id="reference">Reference</h1>
 <ul>
 <li><a href="https://hackmd.io/@udzQ2BohS5C0Xc66dtaYIA/S1wSWRbrO">https://hackmd.io/@udzQ2BohS5C0Xc66dtaYIA/S1wSWRbrO</a></li>
-<li><a href="https://themes.gohugo.io/themes/mainroad/">https://themes.gohugo.io/themes/mainroad/</a></li>
+<li><a href="https://discourse.gohugo.io/t/how-hugo-differentiates-between-pages-and-posts/20592/2">https://discourse.gohugo.io/t/how-hugo-differentiates-between-pages-and-posts/20592/2</a></li>
 </ul>
 
 		</div>
@@ -114,10 +92,10 @@ git push -u origin main</code></pre></div></p>
 
 
 <nav class="pager flex">
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/post/create-new-post/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">建立 hugo post</p>
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/post/hello-hugo/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">設定 hugo mainroad</p>
 		</a>
 	</div>
 </nav>

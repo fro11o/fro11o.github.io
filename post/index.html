@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Posts - 荒廢的山谷</title>
@@ -36,10 +36,10 @@
 		<span class="menu__btn-title" tabindex="-1">Menu</span>
 	</button>
 	<ul class="menu__list">
-		<li class="menu__item">
-			<a class="menu__link" href="/">
+		<li class="menu__item menu__item--active">
+			<a class="menu__link" href="/post/">
 				
-				<span class="menu__text">Home</span>
+				<span class="menu__text">Posts</span>
 				
 			</a>
 		</li>
@@ -58,8 +58,23 @@
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/post/create-new-post/" rel="bookmark">
+			建立 hugo post
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2024-06-10T17:28:46&#43;08:00">June 10, 2024</time></div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		建立 hugo post  使用 hugo new 指令即可 $ hugo new post/create-new-post.md /home/fro11o/github/fro11o/hugo_website/content/post/create-new-post.md created  post 和 page 的差異  有發現到 post 跟 content 到底有什麼不同，查一下看起來是 post 是 hugo 預定義的一種型。你要自己定義其他類型像是 about 也是可以的。下次試試看。  Reference  https://hackmd.io/@udzQ2BohS5C0Xc66dtaYIA/S1wSWRbrO https://discourse.gohugo.io/t/how-hugo-differentiates-between-pages-and-posts/20592/2  
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/post/hello-hugo/" rel="bookmark">
-			Hugo mainroad 設定
+			設定 hugo mainroad
 			</a>
 		</h2>
 		<div class="list__meta meta">
@@ -67,11 +82,10 @@
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2024-06-08T14:56:13&#43;08:00">June 08, 2024</time></div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		步驟 安裝 Hugo (我是使用 Mac)
-homebrew install jugo mkdir hugo_website cd hugo_website hugo new site ./ 下載 mainroad 主題以及調整 hugo.toml 設定
-git submodule add https://github.com/vimux/mainroad.git themes/mainroad vim hugo.toml # 加上 theme = ‘main road’ 可將資料夾推到一個私有的 repo 保存
-vim .gitignore # 設定 *~, .hugo_build.lock git add . git commit git branch -M main git push -u origin main 將 public 部分推到 &lt;username&gt;.github.io
-cd public git init git add . git commit git remote add origin git@github.
+		步驟   安裝 hugo (我是使用 Mac) homebrew install jugo mkdir hugo_website cd hugo_website hugo new site ./ 
+  下載 mainroad 主題以及調整 hugo.toml 設定 git submodule add https://github.com/vimux/mainroad.git themes/mainroad vim hugo.toml # 加上 theme = ‘main road’ 
+  可將資料夾推到一個私有的 repo 保存 vim .gitignore # 設定 *~, .hugo_build.lock git add . git commit git branch -M main git push -u origin main 
+  將 public 部分推到 &lt;username&gt;.
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/post/hello-hugo/">Read more…</a>
@@ -87,14 +101,15 @@ cd public git init git add . git commit git remote add origin git@github.
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/hello-hugo/">Hugo mainroad 設定</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/create-new-post/">建立 hugo post</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/hello-hugo/">設定 hugo mainroad</a></li>
 		</ul>
 	</div>
 </div>
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="Hugo">Hugo (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo/" title="hugo">hugo (2)</a>
 	</div>
 </div>
 </aside>
