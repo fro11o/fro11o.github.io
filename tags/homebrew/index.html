@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hugo - 荒廢的山谷</title>
+	<title>Homebrew - 荒廢的山谷</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	
-	<link rel="alternate" type="application/rss+xml" href="/tags/hugo/index.xml" title="荒廢的山谷">
+	<link rel="alternate" type="application/rss+xml" href="/tags/homebrew/index.xml" title="荒廢的山谷">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 </head>
@@ -53,21 +53,25 @@
 			
 <main class="main list" role="main">
 	<header class="main__header">
-		<h1 class="main__title">Hugo</h1>
+		<h1 class="main__title">Homebrew</h1>
 	</header><article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
-			<a href="/post/create-new-post/" rel="bookmark">
-			建立 hugo post
+			<a href="/post/hello-gtest/" rel="bookmark">
+			Hello Gtest
 			</a>
 		</h2>
 		<div class="list__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2024-06-10T17:28:46&#43;08:00">June 10, 2024</time></div></div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2024-10-25T17:07:50&#43;08:00">October 25, 2024</time></div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		建立 hugo post 使用 hugo new 指令 $ hugo new post/create-new-post.md /home/fro11o/github/fro11o/hugo_website/content/post/create-new-post.md created 預覽 hugo post 使用 hugo server 指令 $ hugo server post 和 page 的差異 有發現到 post 跟 content 到底有什麼不同，查一下看起來是 post 是 hugo 預定義的一種型。你要自己定義其他類型像是 about 也是可以的。下次試試看。 Reference https://hackmd.io/@udzQ2BohS5C0Xc66dtaYIA/S1wSWRbrO https://discourse.gohugo.io/t/how-hugo-differentiates-between-pages-and-posts/20592/2 
+		前言 之前工作上或多或少聽說過 gtest，但沒有真正自己去寫過測項。 剛好最近工作上專案有這個機會可以來摸這塊，這邊記錄下自己在 macbook M1 筆電上練習 gtest 的環境設置步驟。
+安裝 gtest 先用 brew install googletest 安裝 gtest $ brew install googletest ==&gt; Auto-updating Homebrew... Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`). ==&gt; Downloading https://ghcr.io/v2/homebrew/portable-ruby/portable-ruby/blobs/sha256:ce5c135bf98da783bf5964e89aab587e3341c8adc379f36ace17ae7881f53e8c ######################################################################################################################################## 100.0% ==&gt; Pouring portable-ruby-3.3.4_1.arm64_big_sur.bottle.tar.gz ==&gt; Auto-updated Homebrew! Updated 3 taps (homebrew/services, homebrew/core and homebrew/cask). ==&gt; New Formulae (略） ==&gt; New Casks (略） You have 25 outdated formulae installed.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/post/hello-gtest/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	

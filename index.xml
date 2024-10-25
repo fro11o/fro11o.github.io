@@ -4,33 +4,30 @@
     <title>荒廢的山谷</title>
     <link>http://localhost:1313/</link>
     <description>Recent content on 荒廢的山谷</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Jun 2024 17:28:46 +0800</lastBuildDate>
-    
-	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 25 Oct 2024 17:07:50 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello Gtest</title>
+      <link>http://localhost:1313/post/hello-gtest/</link>
+      <pubDate>Fri, 25 Oct 2024 17:07:50 +0800</pubDate>
+      <guid>http://localhost:1313/post/hello-gtest/</guid>
+      <description>前言 之前工作上或多或少聽說過 gtest，但沒有真正自己去寫過測項。 剛好最近工作上專案有這個機會可以來摸這塊，這邊記錄下自己在 macbook M1 筆電上練習 gtest 的環境設置步驟。&#xA;安裝 gtest 先用 brew install googletest 安裝 gtest $ brew install googletest ==&amp;gt; Auto-updating Homebrew... Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`). ==&amp;gt; Downloading https://ghcr.io/v2/homebrew/portable-ruby/portable-ruby/blobs/sha256:ce5c135bf98da783bf5964e89aab587e3341c8adc379f36ace17ae7881f53e8c ######################################################################################################################################## 100.0% ==&amp;gt; Pouring portable-ruby-3.3.4_1.arm64_big_sur.bottle.tar.gz ==&amp;gt; Auto-updated Homebrew! Updated 3 taps (homebrew/services, homebrew/core and homebrew/cask). ==&amp;gt; New Formulae (略） ==&amp;gt; New Casks (略） You have 25 outdated formulae installed.</description>
+    </item>
     <item>
       <title>建立 hugo post</title>
       <link>http://localhost:1313/post/create-new-post/</link>
       <pubDate>Mon, 10 Jun 2024 17:28:46 +0800</pubDate>
-      
       <guid>http://localhost:1313/post/create-new-post/</guid>
-      <description>建立 hugo post  使用 hugo new 指令即可 $ hugo new post/create-new-post.md /home/fro11o/github/fro11o/hugo_website/content/post/create-new-post.md created  post 和 page 的差異  有發現到 post 跟 content 到底有什麼不同，查一下看起來是 post 是 hugo 預定義的一種型。你要自己定義其他類型像是 about 也是可以的。下次試試看。  Reference  https://hackmd.io/@udzQ2BohS5C0Xc66dtaYIA/S1wSWRbrO https://discourse.gohugo.io/t/how-hugo-differentiates-between-pages-and-posts/20592/2  </description>
+      <description>建立 hugo post 使用 hugo new 指令 $ hugo new post/create-new-post.md /home/fro11o/github/fro11o/hugo_website/content/post/create-new-post.md created 預覽 hugo post 使用 hugo server 指令 $ hugo server post 和 page 的差異 有發現到 post 跟 content 到底有什麼不同，查一下看起來是 post 是 hugo 預定義的一種型。你要自己定義其他類型像是 about 也是可以的。下次試試看。 Reference https://hackmd.io/@udzQ2BohS5C0Xc66dtaYIA/S1wSWRbrO https://discourse.gohugo.io/t/how-hugo-differentiates-between-pages-and-posts/20592/2 </description>
     </item>
-    
     <item>
       <title>設定 hugo mainroad</title>
       <link>http://localhost:1313/post/hello-hugo/</link>
       <pubDate>Sat, 08 Jun 2024 14:56:13 +0800</pubDate>
-      
       <guid>http://localhost:1313/post/hello-hugo/</guid>
-      <description>步驟   安裝 hugo (我是使用 Mac) homebrew install jugo mkdir hugo_website cd hugo_website hugo new site ./ 
-  下載 mainroad 主題以及調整 hugo.toml 設定 git submodule add https://github.com/vimux/mainroad.git themes/mainroad vim hugo.toml # 加上 theme = ‘main road’ 
-  可將資料夾推到一個私有的 repo 保存 vim .gitignore # 設定 *~, .hugo_build.lock git add . git commit git branch -M main git push -u origin main 
-  將 public 部分推到 &amp;lt;username&amp;gt;.</description>
+      <description>步驟 安裝 hugo (我是使用 Mac) homebrew install jugo mkdir hugo_website cd hugo_website hugo new site ./ 下載 mainroad 主題以及調整 hugo.toml 設定 git submodule add https://github.com/vimux/mainroad.git themes/mainroad vim hugo.toml # 加上 theme = ‘main road’ 可將資料夾推到一個私有的 repo 保存 vim .gitignore # 設定 *~, .hugo_build.lock git add . git commit git branch -M main git push -u origin main 將 public 部分推到 &amp;lt;username&amp;gt;.github.io cd public git init git add . git commit git remote add origin git@github.</description>
     </item>
-    
   </channel>
 </rss>

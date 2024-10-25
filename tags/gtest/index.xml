@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gtest on 荒廢的山谷</title>
+    <link>http://localhost:1313/tags/gtest/</link>
+    <description>Recent content in Gtest on 荒廢的山谷</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Oct 2024 17:07:50 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gtest/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello Gtest</title>
+      <link>http://localhost:1313/post/hello-gtest/</link>
+      <pubDate>Fri, 25 Oct 2024 17:07:50 +0800</pubDate>
+      <guid>http://localhost:1313/post/hello-gtest/</guid>
+      <description>前言 之前工作上或多或少聽說過 gtest，但沒有真正自己去寫過測項。 剛好最近工作上專案有這個機會可以來摸這塊，這邊記錄下自己在 macbook M1 筆電上練習 gtest 的環境設置步驟。&#xA;安裝 gtest 先用 brew install googletest 安裝 gtest $ brew install googletest ==&amp;gt; Auto-updating Homebrew... Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`). ==&amp;gt; Downloading https://ghcr.io/v2/homebrew/portable-ruby/portable-ruby/blobs/sha256:ce5c135bf98da783bf5964e89aab587e3341c8adc379f36ace17ae7881f53e8c ######################################################################################################################################## 100.0% ==&amp;gt; Pouring portable-ruby-3.3.4_1.arm64_big_sur.bottle.tar.gz ==&amp;gt; Auto-updated Homebrew! Updated 3 taps (homebrew/services, homebrew/core and homebrew/cask). ==&amp;gt; New Formulae (略） ==&amp;gt; New Casks (略） You have 25 outdated formulae installed.</description>
+    </item>
+  </channel>
+</rss>

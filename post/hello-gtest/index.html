@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hello Gtest - 荒廢的山谷</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="荒廢的山谷" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">荒廢的山谷</div>
+					
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item menu__item--active">
+			<a class="menu__link" href="/post/">
+				
+				<span class="menu__text">Posts</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Hello Gtest</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2024-10-25T17:07:50&#43;08:00">October 25, 2024</time></div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<h1 id="前言">前言</h1>
+<p>之前工作上或多或少聽說過 gtest，但沒有真正自己去寫過測項。
+剛好最近工作上專案有這個機會可以來摸這塊，這邊記錄下自己在 macbook M1 筆電上練習 gtest 的環境設置步驟。</p>
+<h1 id="安裝-gtest">安裝 gtest</h1>
+<p>先用 brew install googletest 安裝 gtest
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ brew install googletest
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; Auto-updating Homebrew...
+</span></span><span style="display:flex;"><span>Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with
+</span></span><span style="display:flex;"><span>HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS <span style="color:#f92672">(</span>see <span style="color:#e6db74">`</span>man brew<span style="color:#e6db74">`</span><span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; Downloading https://ghcr.io/v2/homebrew/portable-ruby/portable-ruby/blobs/sha256:ce5c135bf98da783bf5964e89aab587e3341c8adc379f36ace17ae7881f53e8c
+</span></span><span style="display:flex;"><span><span style="color:#75715e">######################################################################################################################################## 100.0%</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; Pouring portable-ruby-3.3.4_1.arm64_big_sur.bottle.tar.gz
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; Auto-updated Homebrew!
+</span></span><span style="display:flex;"><span>Updated <span style="color:#ae81ff">3</span> taps <span style="color:#f92672">(</span>homebrew/services, homebrew/core and homebrew/cask<span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; New Formulae
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>略）
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; New Casks
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>略）
+</span></span><span style="display:flex;"><span>You have <span style="color:#ae81ff">25</span> outdated formulae installed.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; Downloading https://ghcr.io/v2/homebrew/core/googletest/manifests/1.15.2
+</span></span><span style="display:flex;"><span><span style="color:#75715e">######################################################################################################################################## 100.0%</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; Fetching googletest
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; Downloading https://ghcr.io/v2/homebrew/core/googletest/blobs/sha256:d6ba5c5f2cd22dfcd0e81678c94a7d2b570d5aca9eb0c28c744dffc4f60ed488
+</span></span><span style="display:flex;"><span><span style="color:#75715e">######################################################################################################################################## 100.0%</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; Pouring googletest--1.15.2.arm64_sonoma.bottle.tar.gz
+</span></span><span style="display:flex;"><span>🍺  /opt/homebrew/Cellar/googletest/1.15.2: <span style="color:#ae81ff">76</span> files, 2.3MB
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; Running <span style="color:#e6db74">`</span>brew cleanup googletest<span style="color:#e6db74">`</span>...
+</span></span><span style="display:flex;"><span>Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+</span></span><span style="display:flex;"><span>Hide these hints with HOMEBREW_NO_ENV_HINTS <span style="color:#f92672">(</span>see <span style="color:#e6db74">`</span>man brew<span style="color:#e6db74">`</span><span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; <span style="color:#e6db74">`</span>brew cleanup<span style="color:#e6db74">`</span> has not been run in the last <span style="color:#ae81ff">30</span> days, running now...
+</span></span><span style="display:flex;"><span>Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+</span></span><span style="display:flex;"><span>Hide these hints with HOMEBREW_NO_ENV_HINTS <span style="color:#f92672">(</span>see <span style="color:#e6db74">`</span>man brew<span style="color:#e6db74">`</span><span style="color:#f92672">)</span>.
+</span></span><span style="display:flex;"><span>Removing: /Users/fro11o/Library/Caches/Homebrew/hugo--0.127.0... <span style="color:#f92672">(</span>19.8MB<span style="color:#f92672">)</span></span></span></code></pre></div></p>
+<p>可以用 brew ls googletest 查看安裝路徑</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ brew ls googletest
+</span></span><span style="display:flex;"><span>/opt/homebrew/Cellar/googletest/1.15.2/include/gmock/ <span style="color:#f92672">(</span><span style="color:#ae81ff">16</span> files<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>/opt/homebrew/Cellar/googletest/1.15.2/include/googlemock/ <span style="color:#f92672">(</span><span style="color:#ae81ff">7</span> files<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>/opt/homebrew/Cellar/googletest/1.15.2/include/googletest/ <span style="color:#f92672">(</span><span style="color:#ae81ff">12</span> files<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>/opt/homebrew/Cellar/googletest/1.15.2/include/gtest/ <span style="color:#f92672">(</span><span style="color:#ae81ff">24</span> files<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>/opt/homebrew/Cellar/googletest/1.15.2/lib/cmake/ <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> files<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>/opt/homebrew/Cellar/googletest/1.15.2/lib/pkgconfig/ <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> files<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>/opt/homebrew/Cellar/googletest/1.15.2/lib/ <span style="color:#f92672">(</span><span style="color:#ae81ff">4</span> files<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>/opt/homebrew/Cellar/googletest/1.15.2/sbom.spdx.json</span></span></code></pre></div>
+<h1 id="小試身手">小試身手</h1>
+<p>來撰寫第一個 gtest 吧</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat gtest.cpp
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#include &lt;gtest/gtest.h&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TEST<span style="color:#f92672">(</span>Hello, world<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    EXPECT_EQ<span style="color:#f92672">(</span><span style="color:#ae81ff">7</span> * 6, 42<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>int main<span style="color:#f92672">(</span>int argc, char** argv<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    testing::InitGoogleTest<span style="color:#f92672">(</span>&amp;argc, argv<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> RUN_ALL_TESTS<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span></span></span></code></pre></div>
+<p>編譯的時候給入 -I 跟 -L 指定 header 跟 library 位址，否則會找不到標頭檔或是 link 失敗。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ g++ -std<span style="color:#f92672">=</span>c++17 -I/opt/homebrew/include -L/opt/homebrew/lib -lgtest gtest.cpp           
+</span></span><span style="display:flex;"><span>$ ./a.out 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[==========]</span> Running <span style="color:#ae81ff">1</span> test from <span style="color:#ae81ff">1</span> test suite.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>----------<span style="color:#f92672">]</span> Global test environment set-up.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>----------<span style="color:#f92672">]</span> <span style="color:#ae81ff">1</span> test from Hello
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> RUN      <span style="color:#f92672">]</span> Hello.world
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>       OK <span style="color:#f92672">]</span> Hello.world <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> ms<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>----------<span style="color:#f92672">]</span> <span style="color:#ae81ff">1</span> test from Hello <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> ms total<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>----------<span style="color:#f92672">]</span> Global test environment tear-down
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[==========]</span> <span style="color:#ae81ff">1</span> test from <span style="color:#ae81ff">1</span> test suite ran. <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> ms total<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>  PASSED  <span style="color:#f92672">]</span> <span style="color:#ae81ff">1</span> test.</span></span></code></pre></div>
+<p>但其實我們的 main 沒有做太多額外的事情，可以也可以選擇不用自己寫。 [2]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat gtest_main.cpp
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#include &lt;gtest/gtest.h&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TEST<span style="color:#f92672">(</span>Hello, world<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    EXPECT_EQ<span style="color:#f92672">(</span><span style="color:#ae81ff">7</span> * 6, 42<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ g++ -std<span style="color:#f92672">=</span>c++17 -I/opt/homebrew/include -L/opt/homebrew/lib -lgtest -lgtest_main gtest_main.cpp
+</span></span><span style="display:flex;"><span>$ ./a.out
+</span></span><span style="display:flex;"><span>Running main<span style="color:#f92672">()</span> from /tmp/googletest-20240731-4513-2m6gxg/googletest-1.15.2/googletest/src/gtest_main.cc
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[==========]</span> Running <span style="color:#ae81ff">1</span> test from <span style="color:#ae81ff">1</span> test suite.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>----------<span style="color:#f92672">]</span> Global test environment set-up.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>----------<span style="color:#f92672">]</span> <span style="color:#ae81ff">1</span> test from Hello
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> RUN      <span style="color:#f92672">]</span> Hello.world
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>       OK <span style="color:#f92672">]</span> Hello.world <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> ms<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>----------<span style="color:#f92672">]</span> <span style="color:#ae81ff">1</span> test from Hello <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> ms total<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>----------<span style="color:#f92672">]</span> Global test environment tear-down
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[==========]</span> <span style="color:#ae81ff">1</span> test from <span style="color:#ae81ff">1</span> test suite ran. <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> ms total<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>  PASSED  <span style="color:#f92672">]</span> <span style="color:#ae81ff">1</span> test.</span></span></code></pre></div></p>
+<h1 id="reference">Reference</h1>
+<ol>
+<li><a href="https://stackoverflow.com/questions/61563307/how-to-install-gtest-googletest-gmock-on-mac-os-the-normal-build-setup-didnt">https://stackoverflow.com/questions/61563307/how-to-install-gtest-googletest-gmock-on-mac-os-the-normal-build-setup-didnt</a></li>
+<li><a href="https://google.github.io/googletest/primer.html#writing-the-main-function">https://google.github.io/googletest/primer.html#writing-the-main-function</a></li>
+</ol>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/homebrew/" rel="tag">homebrew</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/gtest/" rel="tag">gtest</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/post/create-new-post/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">建立 hugo post</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2024 荒廢的山谷.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
